@@ -138,12 +138,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 name = "rnnoise-c"
 version = "0.1.0"
 dependencies = [
- "rnnoise-sys 0.6.0",
+ "rnnoise-sys 0.1.0",
 ]
 
 [[package]]
 name = "rnnoise-sys"
-version = "0.6.0"
+version = "0.1.0"
 dependencies = [
  "bindgen 0.52.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "cc 1.0.50 (registry+https://github.com/rust-lang/crates.io-index)",
