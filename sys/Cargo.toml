@@ -7,8 +7,10 @@ repository = "https://github.com/RustAudio/rnnoise-c"
 version = "0.1.0"
 authors = ["est31 <MTest31@outlook.com>"]
 
-#include = ["deepspeech/native_client/deepspeech.h", "/src/**",
-#	"/build.rs", "/LICENSE", "Cargo.toml"]
+include = ["rnnoise/src/**", "rnnoise/include/**",
+	"rnnoise/include/COPYING", "rnnoise/include/AUTHORS",
+	"/src/**", "/build.rs", "/LICENSE",
+	"Cargo.toml"]
 
 [build-dependencies]
 cc = "1.0"
