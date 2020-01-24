@@ -67,8 +67,6 @@ fn write_to_file(path :impl AsRef<Path>, bindings :&bindgen::Bindings) {
 }
 
 fn main() {
-	//println!("cargo:rustc-link-lib=deepspeech");
-
 	cc::Build::new()
 		.file("rnnoise/src/celt_lpc.c")
 		.file("rnnoise/src/denoise.c")
