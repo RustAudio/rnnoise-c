@@ -1,0 +1,16 @@
+[package]
+name = "rnnoise-sys"
+description = "Raw C API of Xiph's rnnoise noise cancellation library"
+license = "BSD-3-Clause"
+documentation = "https://docs.rs/rnnoise-sys"
+repository = "https://github.com/RustAudio/rnnoise-c"
+version = "0.6.0"
+authors = ["est31 <MTest31@outlook.com>"]
+
+#include = ["deepspeech/native_client/deepspeech.h", "/src/**",
+#	"/build.rs", "/LICENSE", "Cargo.toml"]
+
+[build-dependencies]
+cc = "1.0"
+bindgen = { version = "0.52", default-features = false, features = ["runtime"] }
+proc-macro2 = { version = "1.0", default-features = false }

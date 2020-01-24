@@ -1,0 +1,15 @@
+[workspace]
+members = ["sys"]
+
+[package]
+name = "rnnoise-c"
+description = "Rust bindings to Xiph's rnnoise noise cancellation library"
+license = "MIT OR Apache-2.0"
+documentation = "https://docs.rs/rnnoise-c"
+repository = "https://github.com/RustAudio/rnnoise-c"
+version = "0.1.0"
+authors = ["est31 <MTest31@outlook.com>"]
+readme = "README.md"
+
+[dependencies]
+rnnoise-sys = { path = "sys" }

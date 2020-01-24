@@ -1,0 +1,3 @@
+[submodule "sys/rnnoise"]
+	path = sys/rnnoise
+	url = https://github.com/xiph/rnnoise/
