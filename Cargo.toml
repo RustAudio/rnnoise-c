@@ -12,4 +12,5 @@ authors = ["est31 <MTest31@outlook.com>"]
 readme = "README.md"
 
 [dependencies]
-rnnoise-sys = { path = "sys" }
+#rnnoise-sys = { path = "sys" }
+rnnoise-sys = "0.1.0"
