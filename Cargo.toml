@@ -16,4 +16,4 @@ audrey = "0.2"
 
 [dependencies]
 #rnnoise-sys = { path = "sys" }
-rnnoise-sys = "0.1.0"
+rnnoise-sys = "0.1.1"
