@@ -11,6 +11,9 @@ version = "0.1.0"
 authors = ["est31 <MTest31@outlook.com>"]
 readme = "README.md"
 
+[dev-dependencies]
+audrey = "0.2"
+
 [dependencies]
 #rnnoise-sys = { path = "sys" }
 rnnoise-sys = "0.1.0"
