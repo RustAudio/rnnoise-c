@@ -13,6 +13,8 @@ readme = "README.md"
 
 [dev-dependencies]
 audrey = "0.2"
+structopt = "0.3.8"
+hound = "3.4"
 
 [dependencies]
 #rnnoise-sys = { path = "sys" }
