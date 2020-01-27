@@ -1,11 +1,9 @@
 extern crate audrey;
+extern crate hound;
 extern crate rnnoise_c;
 extern crate structopt;
 
 use std::fs::File;
-use std::io::Write;
-use std::slice;
-use std::mem;
 
 use audrey::read::Reader;
 use audrey::sample::interpolate::{Converter, Linear};
@@ -86,15 +84,14 @@ fn main() {
     }
     assert_eq!(audio_buf.len(), denoised_buffer.len());
 
-    // Write denoised buffer into output file -- currently written as raw
-    // data, but ideally use audrey or another tool to write in a proper
-    // audio format.
-    let slice_u8: &[u8] = unsafe {
-        slice::from_raw_parts(
-            denoised_buffer.as_ptr() as *const u8,
-            denoised_buffer.len() * mem::size_of::<u16>(),
-        )
+    // Write denoised buffer into output file
+    let spec = hound::WavSpec {
+        channels: 1,
+        sample_rate: SAMPLE_RATE,
+        bits_per_sample: 32,
+        sample_format: hound::SampleFormat::Float,
     };
-    let mut output_file = File::create(&configuration.output).expect(format!("failed to create {}", &configuration.output).as_str());
-    output_file.write_all(slice_u8).expect(format!("failed to write to {}", &configuration.output).as_str());
+    let opt_wav_writer = hound::WavWriter::create(&configuration.output, spec);
+    let mut wav_writer = opt_wav_writer.expect("failed to create wav file");
+    denoised_buffer.iter().for_each(|i| wav_writer.write_sample(*i).expect("failed to write to wav file"));
 }
