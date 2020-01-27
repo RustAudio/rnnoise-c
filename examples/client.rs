@@ -78,7 +78,7 @@ fn main() {
     let buffers = audio_buf[..].chunks(FRAME_SIZE);
     for buffer in buffers {
         rnnoise.process_frame_mut(&buffer, &mut denoised_chunk[..]);
-        denoised_buffer.append(&mut denoised_chunk.clone());
+        denoised_buffer.extend_from_slice(&mut denoised_chunk);
     }
 
     if configuration.verbose {
