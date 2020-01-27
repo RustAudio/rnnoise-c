@@ -72,13 +72,13 @@ fn main() {
             println!("padded audio file with {} characters", padding);
         }
     }
-    let buffers = audio_buf[..].chunks(FRAME_SIZE);
     let mut denoised_buffer: Vec<f32> = vec![];
     let mut rnnoise = DenoiseState::new();
+    let mut denoised_chunk: Vec<f32> = vec![0.0; FRAME_SIZE];
+    let buffers = audio_buf[..].chunks(FRAME_SIZE);
     for buffer in buffers {
-        let mut denoised: Vec<f32> = vec![0.0; FRAME_SIZE];
-        rnnoise.process_frame_mut(&buffer, &mut denoised[..]);
-        denoised_buffer.append(&mut denoised);
+        rnnoise.process_frame_mut(&buffer, &mut denoised_chunk[..]);
+        denoised_buffer.append(&mut denoised_chunk.clone());
     }
 
     if configuration.verbose {
