@@ -17,6 +17,10 @@ impl DenoiseState {
 	///
 	/// Panics if the passed slices are not equal to `FRAME_SIZE`.
 	/// Assumes input data is mono 16 bit audio encoded at a sample rate of 48 kHz.
+	///
+	/// Note that the input floats should be in amplitude ranges between
+	/// -32767.0 and 32767.0, instead of the more common -1.0 and 1.0
+	/// boundaries. The output will be scaled in a similar fashion
 	pub fn process_frame_mut(&mut self, in_data :&[f32], out_data :&mut [f32])  -> f32 {
 		assert_eq!(in_data.len(), FRAME_SIZE);
 		assert_eq!(out_data.len(), FRAME_SIZE);
