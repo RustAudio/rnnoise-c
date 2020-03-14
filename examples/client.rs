@@ -73,9 +73,15 @@ fn main() {
     let mut denoised_buffer: Vec<f32> = vec![];
     let mut rnnoise = DenoiseState::new();
     let mut denoised_chunk: Vec<f32> = vec![0.0; FRAME_SIZE];
-    let buffers = audio_buf[..].chunks(FRAME_SIZE);
+    let buffers = &mut audio_buf[..].chunks_mut(FRAME_SIZE);
     for buffer in buffers {
+        for s in buffer.iter_mut() {
+            *s *= 32767.0;
+        }
         rnnoise.process_frame_mut(&buffer, &mut denoised_chunk[..]);
+        for s in denoised_chunk.iter_mut() {
+            *s *= 1.0/32767.0;
+        }
         denoised_buffer.extend_from_slice(&mut denoised_chunk);
     }
 
