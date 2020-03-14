@@ -17,5 +17,4 @@ structopt = "0.3.8"
 hound = "3.4"
 
 [dependencies]
-#rnnoise-sys = { path = "sys" }
-rnnoise-sys = "0.1.1"
+rnnoise-sys = { path = "sys", version = "0.1.1" }
