@@ -6,6 +6,8 @@ pub struct DenoiseState(* mut sys::DenoiseState);
 
 pub const FRAME_SIZE :usize = 480;
 
+unsafe impl Send for DenoiseState {}
+
 impl DenoiseState {
 	pub fn new() -> Self {
 		let ds = unsafe {
