@@ -265,13 +265,13 @@ version = "0.1.0"
 dependencies = [
  "audrey 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "hound 3.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "rnnoise-sys 0.1.1",
+ "rnnoise-sys 0.1.2",
  "structopt 0.3.14 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
 name = "rnnoise-sys"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "bindgen 0.53.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "cc 1.0.52 (registry+https://github.com/rust-lang/crates.io-index)",
