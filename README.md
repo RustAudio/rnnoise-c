@@ -4,6 +4,10 @@
 [![crates.io](https://img.shields.io/crates/v/rnnoise-c.svg)](https://crates.io/crates/rnnoise-c)
 [![dependency status](https://deps.rs/repo/github/rustaudio/rnnoise-c/status.svg)](https://deps.rs/repo/github/rustaudio/rnnoise-c)
 
+# DEPRECATION NOTICE
+
+*This crate of C bindings is deprecated in favour of the nnnoiseless crate. The latter is pure Rust, compiles on windows, requires no libclang, and is faster than the C version. Use that one!*
+
 Rust bindings of [Xiphs's RNNoise](https://github.com/xiph/rnnoise) library for denoising audio. Find more information on how the library works at this [RNNoise demo](https://people.xiph.org/~jm/demo/rnnoise/).
 
 ## License
