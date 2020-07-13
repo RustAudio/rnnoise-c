@@ -1,11 +1,12 @@
 [package]
 name = "rnnoise-sys"
-description = "Raw C API of Xiph's rnnoise denoising library"
+description = "Raw C API of Xiph's rnnoise denoising library. DEPRECATED in favour of the nnnoiseless crate."
 license = "BSD-3-Clause"
 documentation = "https://docs.rs/rnnoise-sys"
 repository = "https://github.com/RustAudio/rnnoise-c"
 version = "0.1.2"
 authors = ["est31 <MTest31@outlook.com>"]
+maintenance = { status = "deprecated" }
 
 include = ["rnnoise/src/**", "rnnoise/include/**",
 	"rnnoise/include/COPYING", "rnnoise/include/AUTHORS",
