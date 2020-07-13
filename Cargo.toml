@@ -3,13 +3,14 @@ members = ["sys"]
 
 [package]
 name = "rnnoise-c"
-description = "Rust bindings to Xiph's rnnoise denoising library"
+description = "Rust bindings to Xiph's rnnoise denoising library. DEPRECATED in favour of the nnnoiseless crate."
 license = "MIT OR Apache-2.0"
 documentation = "https://docs.rs/rnnoise-c"
 repository = "https://github.com/RustAudio/rnnoise-c"
 version = "0.2.0"
 authors = ["est31 <MTest31@outlook.com>"]
 readme = "README.md"
+maintenance = { status = "deprecated" }
 
 [dev-dependencies]
 audrey = "0.2"
