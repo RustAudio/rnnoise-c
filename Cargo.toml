@@ -10,6 +10,8 @@ repository = "https://github.com/RustAudio/rnnoise-c"
 version = "0.2.0"
 authors = ["est31 <MTest31@outlook.com>"]
 readme = "README.md"
+
+[badges]
 maintenance = { status = "deprecated" }
 
 [dev-dependencies]
