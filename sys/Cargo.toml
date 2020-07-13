@@ -4,7 +4,7 @@ description = "Raw C API of Xiph's rnnoise denoising library. DEPRECATED in favo
 license = "BSD-3-Clause"
 documentation = "https://docs.rs/rnnoise-sys"
 repository = "https://github.com/RustAudio/rnnoise-c"
-version = "0.1.2"
+version = "0.1.3"
 authors = ["est31 <MTest31@outlook.com>"]
 
 include = ["rnnoise/src/**", "rnnoise/include/**",
